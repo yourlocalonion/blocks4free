@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "blocks4free",
+	"version": "${version}",
+	"name": "blocks4free",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/blocks4free/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "yourlocalonion.blocks4free.blocks4free"
+		],
+		"client": [
+			"yourlocalonion.blocks4free.blocks4freeClient"
+		]
+	},
+	"mixins": [
+		"blocks4free.mixins.json",
+		{
+			"config": "blocks4free.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
